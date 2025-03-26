@@ -86,13 +86,12 @@ public class Program
 	// Implement this method following a similar pattern as above
 	public static double Power(string x, string y)
 	{
-        double z = double.Parse(x);
-        int e = int.Parse(y);
-        double result = 1;
-        for (int i = 0; i < e; i++)
-        {
-            result = result * z;
-        }
-        return result;
-    }
+		double z = double.Parse(x);
+		double a = z;
+		for(int i=0; i<double.Parse(y)-1; i++)
+		{
+			z = z * a;
+		}
+		return z;
+	}
 }

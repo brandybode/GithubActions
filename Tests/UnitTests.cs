@@ -19,11 +19,11 @@ public class Addition
 		Assert.ThrowsException<FormatException>(() => Program.Add("a", "a"));
 	}
 
-	//[TestMethod]
-	//public void Add_Null_Patino()
-	//{
-	//	Assert.ThrowsException<ArgumentNullException>(() => Program.Add("1", null));
-	//	Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null, "1"));
-	//	Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null, null));
-	//}
+    [TestMethod]
+	public void Add_Null_Patino()
+    {
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Add("1", null!));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null!, "1"));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null!, null!));
+    }
 }
